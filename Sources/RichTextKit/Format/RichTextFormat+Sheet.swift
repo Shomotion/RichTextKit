@@ -73,7 +73,10 @@ public extension RichTextFormat {
                 .toolbar {
                     ToolbarItem(placement: .confirmationAction) {
                         Button(RTKL10n.done.text) {
+                            // this is the Done button for the formatting sheet
+                            print("dismissing")
                             dismiss()
+                            context.selectRange(.init(location: 0, length: 0))
                         }
                     }
                 }
